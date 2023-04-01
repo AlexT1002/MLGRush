@@ -1,0 +1,44 @@
+Messages:
+  JoinMessage: §7[§2+§7] %player%
+  QuitMessage: §7[§c-§7] %player%
+  Timer:
+    5seconds: Start in 5 Seconds.
+    3seconds: Start in 3 Seconds.
+    2seconds: Start in 2 Seconds.
+    1seconds: Start in 1 Seconds.
+
+Settings:
+  minPlayers: 2
+  maxPlayers: 2
+  pointsForWin: 5
+
+Items:
+  stickName: §6Stick
+  pickaxeName: §6Pickaxe
+  blocksName: §6Sandstone
+
+Setup:
+  Map:
+    redTeam:
+      X:
+      Y:
+      Z:
+      YAW:
+      PITCH:
+      WORLD:
+    blueTeam:
+      X:
+      Y:
+      Z:
+      YAW:
+      PITCH:
+      WORLD:
+    minHeight:
+    maxHeight:
+  Lobby:
+    X:
+    Y:
+    Z:
+    YAW:
+    PITCH:
+    WORLD:

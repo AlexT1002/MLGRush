@@ -1,0 +1,9 @@
+name: MLGRush
+main: de.Alex1002.MLGRush.MLGRush
+version: 1.0
+api-version: 1.19
+
+commands:
+  setup:
+  start:
+  again:
