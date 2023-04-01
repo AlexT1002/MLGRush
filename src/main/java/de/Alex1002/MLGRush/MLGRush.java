@@ -1,6 +1,5 @@
 package de.Alex1002.MLGRush;
 
-import de.Alex1002.MLGRush.Commands.AgainCommand;
 import de.Alex1002.MLGRush.Commands.SetupCommand;
 import de.Alex1002.MLGRush.Commands.StartCommand;
 import de.Alex1002.MLGRush.GameStates.LobbyState;
@@ -38,6 +37,5 @@ public class MLGRush extends JavaPlugin {
     private void registerCommands(){
         getCommand("setup").setExecutor(new SetupCommand());
         getCommand("start").setExecutor(new StartCommand());
-        getCommand("again").setExecutor(new AgainCommand());
     }
 }
