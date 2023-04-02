@@ -27,6 +27,11 @@ public class InventoryCloseListener implements Listener {
                             blocksInt = i;
                         }
                     }
+                    if(stickInt == pickaxeInt || stickInt == blocksInt || pickaxeInt == blocksInt){
+                        stickInt = 0;
+                        pickaxeInt = 1;
+                        blocksInt = 2;
+                    }
                     InventoryManager.getPlayerData().set(String.valueOf(player.getUniqueId()), stickInt + "," + pickaxeInt + "," + blocksInt);
                     InventoryManager.getPlayerData().save(InventoryManager.getPlayerDataFile());
 

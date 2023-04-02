@@ -19,18 +19,23 @@ public class InventoryManager {
 
     private static Inventory settingsInv = Bukkit.createInventory(null, 9, "§6§lSettings");
 
-    private static ItemStack stick = new ItemStack(Material.STICK);
-    private static ItemStack pickaxe = new ItemStack(Material.WOODEN_PICKAXE);
-    private static ItemStack blocks = new ItemStack(Material.SANDSTONE);
+
     private static ItemStack settings = new ItemStack(Material.COMPARATOR);
 
+
+    private static ItemStack stick = new ItemStack(Material.STICK);
     private static ItemMeta stickMeta = stick.getItemMeta();
+
+    private static ItemStack pickaxe = new ItemStack(Material.WOODEN_PICKAXE);
+
+
+    private static ItemStack blocks = new ItemStack(Material.SANDSTONE);
+
     private static ItemMeta pickaxeMeta = pickaxe.getItemMeta();
     private static ItemMeta blocksMeta = blocks.getItemMeta();
     private static ItemMeta settingsMeta = settings.getItemMeta();
 
-
-    public static void giveItems(Player player) {
+    public InventoryManager(){
         stickMeta.setDisplayName(init.getPlugin().getConfig().getString("Items.stickName"));
         stickMeta.addEnchant(Enchantment.KNOCKBACK, 2, true);
         pickaxeMeta.setDisplayName(init.getPlugin().getConfig().getString("Items.pickaxeName"));
@@ -39,11 +44,9 @@ public class InventoryManager {
         blocksMeta.setDisplayName(init.getPlugin().getConfig().getString("Items.blocksName"));
         blocks.setAmount(64);
 
+    }
 
-        stick.setItemMeta(stickMeta);
-        pickaxe.setItemMeta(pickaxeMeta);
-        blocks.setItemMeta(blocksMeta);
-
+    public static void giveItems(Player player) {
         player.getInventory().setItem(getPlayersSettingsSlot(player, "stick"), stick);
         player.getInventory().setItem(getPlayersSettingsSlot(player, "blocks"), blocks);
         player.getInventory().setItem(getPlayersSettingsSlot(player, "pickaxe"), pickaxe);
@@ -78,7 +81,8 @@ public class InventoryManager {
         player.getInventory().setItem(8, settings);
     }
 
-    public static void openSettingsInventory(Player player) {
+    public void openSettingsInventory(Player player) {
+        settingsInv.clear();
         stickMeta.setDisplayName(init.getPlugin().getConfig().getString("Items.stickName"));
         stickMeta.addEnchant(Enchantment.KNOCKBACK, 2, true);
         pickaxeMeta.setDisplayName(init.getPlugin().getConfig().getString("Items.pickaxeName"));
@@ -116,9 +120,11 @@ public class InventoryManager {
         }
         return 0;
     }
+
     public static Inventory getSettingsInv(){
         return settingsInv;
     }
+
     public static File getPlayerDataFile() {
         return playerDataFile;
     }

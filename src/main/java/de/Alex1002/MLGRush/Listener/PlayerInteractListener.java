@@ -11,12 +11,13 @@ public class PlayerInteractListener implements Listener {
     @EventHandler
     public static void playerInteract(PlayerInteractEvent event){
         Player player = event.getPlayer();
+        InventoryManager inventoryManager = new InventoryManager();
         if(event.getAction().isRightClick()){
             try{
                 if(event.getItem().getType().equals(Material.RED_BED) || event.getItem().getType().equals(Material.BLUE_BED)){
                     event.setCancelled(true);
                 }else if(event.getItem().getType().equals(Material.COMPARATOR)) {
-                    InventoryManager.openSettingsInventory(player);
+                    inventoryManager.openSettingsInventory(player);
                 }
             }catch (Exception e){
 
