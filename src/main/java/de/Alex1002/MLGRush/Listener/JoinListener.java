@@ -21,6 +21,7 @@ public class JoinListener implements Listener {
         PlayerManager.setGameMode(player, GameMode.ADVENTURE);
         PlayerManager.setHealth(player, 20);
         InventoryManager.clearInventory(player);
+        InventoryManager.giveSettingsItem(player);
 
         player.teleport(init.getLocation("lobbyspawn"));
         init.addPlayer(event.getPlayer());

@@ -16,6 +16,7 @@ Items:
   stickName: §6Stick
   pickaxeName: §6Pickaxe
   blocksName: §6Sandstone
+  settingsName: §6§lSettings
 
 Setup:
   Map:

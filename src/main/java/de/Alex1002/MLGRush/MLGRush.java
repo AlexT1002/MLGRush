@@ -32,6 +32,7 @@ public class MLGRush extends JavaPlugin {
         pluginManager.registerEvents(new PlayerDeathListener(), init.getPlugin());
         pluginManager.registerEvents(new PlayerInteractListener(), init.getPlugin());
         pluginManager.registerEvents(new PlayerFoodListener(), init.getPlugin());
+        pluginManager.registerEvents(new InventoryCloseListener(), init.getPlugin());
     }
 
     private void registerCommands(){

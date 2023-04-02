@@ -1,5 +1,6 @@
 package de.Alex1002.MLGRush.Listener;
 
+import de.Alex1002.MLGRush.Utils.InventoryManager;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -14,6 +15,8 @@ public class PlayerInteractListener implements Listener {
             try{
                 if(event.getItem().getType().equals(Material.RED_BED) || event.getItem().getType().equals(Material.BLUE_BED)){
                     event.setCancelled(true);
+                }else if(event.getItem().getType().equals(Material.COMPARATOR)) {
+                    InventoryManager.openSettingsInventory(player);
                 }
             }catch (Exception e){
 
