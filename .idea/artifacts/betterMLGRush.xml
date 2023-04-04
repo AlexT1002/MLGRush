@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="betterMLGRush">
+    <output-path>$PROJECT_DIR$/../../Minecraft server/plugins</output-path>
+    <root id="archive" name="betterMLGRush.jar">
+      <element id="module-output" name="betterMLGRush" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/playerdata.yml" />
+    </root>
+  </artifact>
+</component>
